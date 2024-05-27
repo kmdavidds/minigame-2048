@@ -249,7 +249,7 @@ function spawnRandom() {
         $("#"+index).addClass("spawning");
         setTimeout(() => {
             $("#"+index).removeClass("spawning");
-        }, 6900);
+        }, 2000);
     } else {
         alert("You have lost. Try again!")
         for (let i = 0, x; i <= 15; i++) {
