@@ -234,4 +234,9 @@ function spawnRandom() {
         targetY = Math.floor(Math.random()*4);
     }
     board[targetX][targetY] = 2;
+    let index = targetX * 4 + targetY;
+    $("#"+index).addClass("spawning");
+    setTimeout(() => {
+        $("#"+index).removeClass("spawning");
+    }, 6900);
 }
