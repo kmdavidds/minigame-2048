@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -15,7 +16,6 @@ body {
     grid-template-rows: repeat(4, 50px);
     background-color: brown;
     padding: 2em;
-
     border-radius: 10%;
 }
 
@@ -28,4 +28,39 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 10%;
+}
+
+.arrows {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 4em;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#up {
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+#right {
+    grid-area: 2 / 3 / span 1 / span 1;
+}
+#down {
+    grid-area: 3 / 2 / span 1 / span 1;
+}
+#left {
+    grid-area: 2 / 1 / span 1 / span 1;
 }

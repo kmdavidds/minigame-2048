@@ -14,6 +14,39 @@ $(document).on("keydown", (event) => {
     }
 });
 
+$("#up").on("click", () => {
+    calculateBoard("ArrowUp");
+    renderBoard();
+    setTimeout(() => {
+        spawnRandom();
+        renderBoard();
+    }, 100);
+});
+$("#right").on("click", () => {
+    calculateBoard("ArrowRight");
+    renderBoard();
+    setTimeout(() => {
+        spawnRandom();
+        renderBoard();
+    }, 100);
+});
+$("#down").on("click", () => {
+    calculateBoard("ArrowDown");
+    renderBoard();
+    setTimeout(() => {
+        spawnRandom();
+        renderBoard();
+    }, 100);
+});
+$("#left").on("click", () => {
+    calculateBoard("ArrowLeft");
+    renderBoard();
+    setTimeout(() => {
+        spawnRandom();
+        renderBoard();
+    }, 100);
+});
+
 function calculateBoard(key) {
     switch (key) {
         case "ArrowUp":
