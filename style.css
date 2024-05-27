@@ -72,3 +72,8 @@ body {
 #left {
     grid-area: 2 / 1 / span 1 / span 1;
 }
+
+.pressed {
+    box-shadow: 0 0 69px brown;
+    background-color: #a52a2a90;
+}

@@ -1,6 +1,7 @@
 let board = [[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0]];
 
 const spawnDelay = 500;
+const buttonAnimationDelay = 200;
 
 spawnRandom();
 renderBoard();
@@ -52,24 +53,40 @@ $("#left").on("click", () => {
 function calculateBoard(key) {
     switch (key) {
         case "ArrowUp":
+            $("#up").addClass("pressed");
+            setTimeout(() => {
+                $("#up").removeClass("pressed");
+            }, buttonAnimationDelay);
             for (let i = 0; i < 4; i++) {
                 pushUp();
                 addUp();
             }
             break;
         case "ArrowRight":
+            $("#right").addClass("pressed");
+            setTimeout(() => {
+                $("#right").removeClass("pressed");
+            }, buttonAnimationDelay);
             for (let i = 0; i < 4; i++) {
                 pushRight();
                 addRight()
             }
             break;
         case "ArrowDown":
+            $("#down").addClass("pressed");
+            setTimeout(() => {
+                $("#down").removeClass("pressed");
+            }, buttonAnimationDelay);
             for (let i = 0; i < 4; i++) {
                 pushDown();
                 addDown();
             }
             break;
         case "ArrowLeft":
+            $("#left").addClass("pressed");
+            setTimeout(() => {
+                $("#left").removeClass("pressed");
+            }, buttonAnimationDelay);
             for (let i = 0; i < 4; i++) {
                 pushLeft();
                 addLeft();
