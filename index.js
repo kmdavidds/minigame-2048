@@ -1,5 +1,7 @@
 let board = [[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0]];
 
+const spawnDelay = 500;
+
 spawnRandom();
 renderBoard();
 
@@ -10,7 +12,7 @@ $(document).on("keydown", (event) => {
         setTimeout(() => {
             spawnRandom();
             renderBoard();
-        }, 100);
+        }, spawnDelay);
     }
 });
 
@@ -20,7 +22,7 @@ $("#up").on("click", () => {
     setTimeout(() => {
         spawnRandom();
         renderBoard();
-    }, 100);
+    }, spawnDelay);
 });
 $("#right").on("click", () => {
     calculateBoard("ArrowRight");
@@ -28,7 +30,7 @@ $("#right").on("click", () => {
     setTimeout(() => {
         spawnRandom();
         renderBoard();
-    }, 100);
+    }, spawnDelay);
 });
 $("#down").on("click", () => {
     calculateBoard("ArrowDown");
@@ -36,7 +38,7 @@ $("#down").on("click", () => {
     setTimeout(() => {
         spawnRandom();
         renderBoard();
-    }, 100);
+    }, spawnDelay);
 });
 $("#left").on("click", () => {
     calculateBoard("ArrowLeft");
@@ -44,7 +46,7 @@ $("#left").on("click", () => {
     setTimeout(() => {
         spawnRandom();
         renderBoard();
-    }, 100);
+    }, spawnDelay);
 });
 
 function calculateBoard(key) {
