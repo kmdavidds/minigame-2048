@@ -211,6 +211,18 @@ function renderBoard() {
         x = board[Math.floor(i/4)][i%4];
         if (x == 0) x = "";
         $("#"+i).text(x);
+
+        if (x >= 128) {
+            $("#"+i).addClass("medium-number");
+        } else {
+            $("#"+i).removeClass("medium-number");
+        }
+
+        if (x >= 1024) {
+            $("#"+i).addClass("large-number");
+        } else {
+            $("#"+i).removeClass("large-number");
+        }
     }
 }
 

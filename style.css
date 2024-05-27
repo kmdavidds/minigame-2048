@@ -77,3 +77,11 @@ body {
     box-shadow: 0 0 69px brown;
     background-color: #a52a2a90;
 }
+
+.medium-number {
+    font-size: large;
+}
+
+.large-number {
+    font-size: medium;
+}
