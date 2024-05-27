@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.board {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 1em;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(4, 50px);
+    background-color: brown;
+    padding: 2em;
+
+    border-radius: 10%;
+}
+
+.box {
+    display: flex;
+    background-color: white;
+    color: brown;
+    font-size:xx-large;
+    font-family: monocraft;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+}
