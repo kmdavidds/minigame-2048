@@ -52,20 +52,28 @@ $("#left").on("click", () => {
 function calculateBoard(key) {
     switch (key) {
         case "ArrowUp":
-            pushUp();
-            addUp();
+            for (let i = 0; i < 4; i++) {
+                pushUp();
+                addUp();
+            }
             break;
         case "ArrowRight":
-            pushRight();
-            addRight()
+            for (let i = 0; i < 4; i++) {
+                pushRight();
+                addRight()
+            }
             break;
         case "ArrowDown":
-            pushDown();
-            addDown();
+            for (let i = 0; i < 4; i++) {
+                pushDown();
+                addDown();
+            }
             break;
         case "ArrowLeft":
-            pushLeft();
-            addLeft();
+            for (let i = 0; i < 4; i++) {
+                pushLeft();
+                addLeft();
+            }
             break;
     
         default:
