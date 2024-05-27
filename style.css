@@ -61,7 +61,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: brown;
-    font-size: medium;
+    font-size: large;
     font-family: monocraft;
     color: white;
     width: 69px;
@@ -75,6 +75,7 @@ body {
 #right {
     grid-area: 2 / 3 / span 1 / span 1;
     padding-left: 4px;
+    width: 65px;
 }
 #down {
     grid-area: 3 / 2 / span 1 / span 1;
