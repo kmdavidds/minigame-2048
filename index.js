@@ -4,12 +4,14 @@ spawnRandom();
 renderBoard();
 
 $(document).on("keydown", (event) => {
-    calculateBoard(event.key);
-    renderBoard();
-    setTimeout(() => {
-        spawnRandom();
+    if (event.key.length >= 7) {
+        calculateBoard(event.key);
         renderBoard();
-    }, 250);
+        setTimeout(() => {
+            spawnRandom();
+            renderBoard();
+        }, 100);
+    }
 });
 
 function calculateBoard(key) {
