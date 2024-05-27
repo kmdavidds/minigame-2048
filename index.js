@@ -223,20 +223,38 @@ function renderBoard() {
         } else {
             $("#"+i).removeClass("large-number");
         }
+
+        if (x == 2048) {
+            alert("You have won. Congratulations!")
+            for (let i = 0, x; i <= 15; i++) {
+                board[Math.floor(i/4)][i%4] = 0;
+                $("#"+i).text("");
+            }
+        }
     }
 }
 
 function spawnRandom() {
     let targetX = Math.floor(Math.random()*4);
     let targetY = Math.floor(Math.random()*4);
-    while (board[targetX][targetY] !== 0) {
+    let count = 0;
+    while (board[targetX][targetY] !== 0 && count <= 69) {
         targetX = Math.floor(Math.random()*4);
         targetY = Math.floor(Math.random()*4);
+        count++;
     }
-    board[targetX][targetY] = 2;
-    let index = targetX * 4 + targetY;
-    $("#"+index).addClass("spawning");
-    setTimeout(() => {
-        $("#"+index).removeClass("spawning");
-    }, 6900);
+    if (count <= 69) {
+        board[targetX][targetY] = 2;
+        let index = targetX * 4 + targetY;
+        $("#"+index).addClass("spawning");
+        setTimeout(() => {
+            $("#"+index).removeClass("spawning");
+        }, 6900);
+    } else {
+        alert("You have lost. Try again!")
+        for (let i = 0, x; i <= 15; i++) {
+            board[Math.floor(i/4)][i%4] = 0;
+            $("#"+i).text("");
+        }
+    }
 }
